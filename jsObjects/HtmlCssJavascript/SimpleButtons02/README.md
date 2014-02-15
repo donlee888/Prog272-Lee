@@ -1,7 +1,8 @@
 Simple Buttons
 ==============
 
-Respond to clicks on buttons or links.
+Respond to clicks on buttons or links and also work with input
+controls.
 
 We have:
 
@@ -53,3 +54,5 @@ Your JavaScript might look like this:
 The code in document.ready links the buttons to the linkClick and buttonClick
 functions. The functions place data in a paragraph element when the button or
 href are clicked.
+
+- [jQuery on Elvenware](http://www.elvenware.com/charlie/development/web/JavaScript/JQueryBasic.html)
