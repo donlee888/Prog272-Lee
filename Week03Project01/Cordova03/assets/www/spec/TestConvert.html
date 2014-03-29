@@ -9,14 +9,22 @@
 		<meta name="author" content="Donald Lee" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="shortcut icon" type="image/png" href="Library/jasmine_favicon.png">
+		<link rel="stylesheet" type="text/css" href="../css/index.css">
 		<link rel="stylesheet" type="text/css" href="Library/jasmine.css">
-		<script src="Library/jquery-1.11.0.min.js"></script>
+
+<!-- Jasmine and jQuery -->		
+		<script src="../js/jquery-2.1.0.js"></script>
+		<link rel="stylesheet" type="text/css" href="Library/jasmine.css">
 		<script src="Library/jasmine.js"></script>
-		<script src="Library/jasmine-html.js"></script>
-		<script src="Library/boot.js"></script>
-		<script src="src/index.js"></script>
-		<!--		<script src="spec/test01.spec.js"></script>  -->
-		<script src="spec/Test01.js"></script>
+  		<script src="Library/jasmine-html.js"></script>
+  		<script src="Library/boot.js"></script>
+<!--		<script src="Library/jquery-1.11.0.min.js"></script>
+
+<!-- Test Code -->
+<!--	<script src="../js/index.js"></script>
+-->
+ 		<script src="../js/Convert.js"></script>
+  		<script src="TestConvert.js"></script>  		
 
 	</head>
 
@@ -32,11 +40,11 @@
 			<input type="text" id="userInputID">
 			</input> feet
 			<br>
-			<button onclick="Convert.milesToFeet">
+			<button id="milesButton" onclick="Convert.feetToMiles()">
 				Miles to Feet
 			</button>
 		<br>
-			Answer: <span id="milesToFeetID"></span> feet
+			Answer: <span id="feetToMilesID"></span> feet
 
 		<p>
 		<p>
@@ -45,7 +53,7 @@
 			<input type="text" id="userInputID">
 			</input> degree
 			<br>
-			<button onclick="Convert.celciusToFarenheit">
+			<button id="C2FButton" onclick="Convert.celciusToFarenheit()">
 				Celsius to Farenheit
 			</button>
 		<br>
@@ -58,7 +66,7 @@
 			<input type="text" id="userInputID">
 			</input>
 			<br>
-			<button onclick="Convert.squareRoot">
+			<button id="squareButton" onclick="Convert.squareRoot()">
 				SQUARE
 			</button>
 		<br>

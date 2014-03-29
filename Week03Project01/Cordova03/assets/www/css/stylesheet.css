@@ -33,9 +33,8 @@ body, h1 , div {
 body {
 	font-family: "Lucida Console", Monaco, monospace;
 	font-size: 15px;
-/*	background-color: green; */
+	background-color: green;
 /*	background-color: #87B47E;*/
-	background-color: #00AAAA;
 }
 
 

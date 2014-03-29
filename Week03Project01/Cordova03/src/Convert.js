@@ -24,11 +24,8 @@ document.addEventListener('DOMContentLoaded', function() {'use strict'
 	document.getElementById('squareRootID').innerHTML = Convert.squareRoot;
 }, false);
 
-//var userInput = document.getElementById("userInputID").value;
-var userInput = document.getElementById("userInputID").val();
-//var userInput = $('#userInputID').val();
-
-Console.log(userInput);
+// var userInput = document.getElementById("userInputID").value;
+var userInput = $('#userInputID').val();
 
 var Convert = {
 /*	
@@ -38,9 +35,9 @@ var Convert = {
 	feetPerMile : 5280,
 */
 
-	miles : userInput,
-	celsiusDegree: userInput,
-	numberToSquare: userInput,
+	miles : userInput
+	celsiusDegree: userInput
+	numberToSquare: userInput
 	feetPerMile : 5280,
 	
 	milesToFeet : function() {'use strict';
