@@ -1,5 +1,5 @@
 describe("Week03 Cordova Miles Object Jasmine Unit Test", function() {'use strict';
-
+/*
 	it("expect object Convert miles to be 3", function() {
 		expect(Convert.miles).toBe(3);
 	});
@@ -20,6 +20,11 @@ describe("Week03 Cordova Miles Object Jasmine Unit Test", function() {'use stric
 	it("expects object for miles * feetPerMile to be 3 * 5280 feet", function() {
 		var actual = Convert.feetToMiles();
 		expect(Convert.miles * Convert.feetPerMile(3)).toBe(3 * 5280);
+	});
+*/
+	it("expects object for miles * feetPerMile to be 3 * 5280 feet", function() {
+		var actual = Convert.feetToMiles();
+		expect(Convert.feetToMiles(3)).toBe(3 * 5280);
 	});
 
 	it("expects Convert.celsiusToFarenheit(0) to equal 32 degrees", function() {

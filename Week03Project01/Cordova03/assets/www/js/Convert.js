@@ -12,19 +12,19 @@ if (ConsoleTest) {
 
 // Object with embedded functions to convert:
 // 1. miles To Feet
-// 2. celcius To Fareheit Degree
+// 2. celsius To Fareheit Degree
 // 3. Square Root of an integer
 
  // query Selector
 
-/*
+
 document.addEventListener('DOMContentLoaded', function() {'use strict'
 //   var userInput = document.getElementById("userInputID").value;
 	document.getElementById('feetToMilesID').innerHTML = Convert.feetToMiles;
-	document.getElementById('celciusToFarenheitID').innerHTML = Convert.celsiusToFareheit;
+	document.getElementById('celsiusToFarenheitID').innerHTML = Convert.celsiusToFarenheit;
 	document.getElementById('squareRootID').innerHTML = Convert.squareRoot;
 }, false);
-*/
+
 
 // var userInput = document.getElementById("userInputID").value;
 // var userInput = $('#userInputID').val();
