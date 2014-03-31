@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="generator" content="pandoc">
+		<title>NodeExpressMongo01</title>
+		<link href="index.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="jquery-2.1.0.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script type="text/javascript" src="index.js"></script>
+		<script src="Examples of index.js"></script>
+	</head>
+	<body>
+
+		<h1>NodeExpressMongo01 Version 1</h1>
+		
+		
+		<p>
+			A simple Node Express OBJECT program with MongoDb support.
+		</p>
+
+		</p>This program assumes you have already run MongoTalk to insert
+		some data into the "built-in" MongoDb test database.
+		</p>
+
+		<div id="output"></div>
+		<p>
+		Please enter the number of records to show and then cick on the button.
+		<br>
+		<input id="userInput1" name="userInput1" type="text">
+		<button id="buttonID1">
+			Show Data
+		</button>
+
+
+		<ul id="showData1"></ul>
+		
+
+		<h1>NodeExpressMongo01 Version 2</h1>
+
+		<p>
+			A simple Node Express FUNCTION program with MongoDb support.
+		</p>
+
+		</p>This program assumes you have already run MongoTalk to insert
+		some data into the "built-in" MongoDb test database.</p>
+
+		<p>
+
+			<button id="readAll">
+				Read Data
+			</button>
+		</p>
+
+		<div>
+			<input id="userInput2" name="userInput2" type="text" />
+			<p>
+				<span id="firstName"> </span>
+				<span id="lastName"> </span>
+			</p>
+			<p>
+				<span id="address"> </span>
+			</p>
+			<p>
+				<span id="city"> </span><span id="state"> </span><span id="zip"> </span>
+			</p>
+		</div>
+
+		<hr>
+		<input id="userInput2" value="0" type="number">
+
+		<button id="showData2">
+			Show Data
+		</button>
+
+		<ul id="mongoData">
+
+		</ul>
+
+	</body>
