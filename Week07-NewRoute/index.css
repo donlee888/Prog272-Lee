@@ -1,0 +1,238 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color:#E4E4E4;
+    background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, #A7A7A7),
+        color-stop(0.51, #E4E4E4)
+    );
+    background-attachment:fixed;
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:12px;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    text-transform:uppercase;
+    width:100%;
+}
+
+/* Portrait layout (default) */
+.app {
+    background:url(../img/logo.png) no-repeat center top; /* 170px x 200px */
+    position:absolute;             /* position in the center of the screen */
+    left:50%;
+    top:50%;
+    height:50px;                   /* text area height */
+    width:225px;                   /* text area width */
+    text-align:center;
+    padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
+    margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
+                                   /* offset horizontal: half of text area width */
+}
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .app {
+        background-position:left center;
+        padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
+        margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
+                                      /* offset horizontal: half of image width and text area width */
+    }
+}
+
+h1 {
+    font-size:24px;
+    font-weight:normal;
+    margin:0px;
+    overflow:visible;
+    padding:0px;
+    text-align:center;
+}
+
+.event {
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    color:#FFFFFF;
+    font-size:12px;
+    margin:0px 30px;
+    padding:2px 0px;
+}
+
+.event.listening {
+    background-color:#333333;
+    display:block;
+}
+
+.event.received {
+    background-color:#4B946A;
+    display:none;
+}
+
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+@-webkit-keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+.blink {
+    animation:fade 3000ms infinite;
+    -webkit-animation:fade 3000ms infinite;
+}
+
+<!doctype html> 
+
+
+/* Black: #000000
+White: #FFFFFF
+Red: #FF0000
+Blue: #0000FF
+Green: #00FF00
+Yellow: #FFFF00
+Orange: #FF9900
+Violet: #CC33FF
+
+Hex colors are not the only color system you can use. You can optionally use the RGB/RGBA or HSL/HSLA color systems. They all produce the same colors, but they describe them in different ways.
+The RGB system uses three numbers that describe the relative amounts of red, green, and blue that are mixed together to produce any color. The numbers can be from 0 to 255. Here's the RGB color code for a dark violet: rgb(204, 51, 255)
+You could apply this to a CSS property, like a font color, like this:
+
+color: rgb(205, 51, 255);
+The RGBA system adds one more number that describes how transparent a color is. 0 means that the color is completely transparent, and 1 means that it's completely opaque (solid). A value of 0.5 makes the color semitransparent. Here's a semitransparent RGBA version of dark violet.
+
+rgba(204, 51, 255, 0.5)
+
+*/
+
+<title>Background images</title>
+
+<style>
+
+body, h1 , div {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "Lucida Console", Monaco, monospace;
+	font-size: 15px;
+	background-color: green;
+/*	background-color: #87B47E;*/
+}
+
+
+/*	background-color: #FFFFFF;
+
+    background-image: url("../img/map.jpg");
+
+	background-color: pink;
+
+	background-color: tan;
+*/
+
+h1
+{
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 30px;
+  font-weight: bold;
+  padding-top: 20px;
+  padding-left: 30px;
+
+}
+
+h2
+{
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 25px;
+  padding-top: 20px;
+  padding-left: 25px;
+}
+
+h3
+{
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 15px;
+  padding-top: 20px;
+  padding-left: 25px;
+}
+
+p, li
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+em
+{
+  text-decoration: underline;
+  font-style: normal;
+}
+
+strong
+{
+  font-weight: bold;
+  color: red;
+}
+
+li
+{
+  list-style-type: square;
+}
+
+a
+{
+  color: green;
+  text-decoration: none;
+}
+
+a:hover
+{
+  background-color: black;
+  color: white;
+}
+
+/* img
+{
+  width: 250px;
+  height: auto;
+  border-style: dashed;
+  border-width: 2px;
+  border-color: navy;
+  padding: 10px;
+}
+
+*/
+
