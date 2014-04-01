@@ -1,6 +1,6 @@
 var Object2 = (function() {'use strict';
 
-	var addresses = [];
+	var records = [];
 
 	function Object2() {
 
@@ -8,13 +8,12 @@ var Object2 = (function() {'use strict';
 
 		$("#readData2").click(readData);
 		$("#showData2").click(showData);
-		$("#showAllData2").click(showAllData);
 	}
 
 	var readData = function() {
 		console.log("readData called!");
-		$.getJSON('/addresses', function(data) {
-			addresses = data;
+		$.getJSON('/records', function(data) {
+			records = data;
 			console.log(data[0]);
 			showRecord(0);			// show first record with index 0 only
 			$("#mongoData").empty();
@@ -26,13 +25,13 @@ var Object2 = (function() {'use strict';
 
 	var showRecord = function(index) {
 		console.log("showRecord called!");
-		$('#inputID').html(addresses[index].id);
-		$('#firstName').html(addresses[index].firstName);
-		$('#lastName').html(addresses[index].lastName);
-		$('#address').html(addresses[index].address);
-		$('#city').html(addresses[index].city);
-		$('#state').html(addresses[index].state);
-		$('#zip').html(addresses[index].zip);
+		$('#inputID').html(records[index].id);
+		$('#firstName').html(records[index].firstName);
+		$('#lastName').html(records[index].lastName);
+		$('#address').html(records[index].address);
+		$('#city').html(records[index].city);
+		$('#state').html(records[index].state);
+		$('#zip').html(records[index].zip);
 	};
 
 	var showData = function() {
@@ -41,8 +40,9 @@ var Object2 = (function() {'use strict';
 		showRecord(index);
 	};
 
-	var showAllData = function() {
-		console.log("showAllData called!");
+/*
+	var readAllData = function() {
+		console.log("readAllData called!");
 		$.getJSON('/read', function(data) {
 			console.log(data);
 			for (var i = 0; i < data.length; i++) {
@@ -51,7 +51,8 @@ var Object2 = (function() {'use strict';
 		});
 
 	}
-	/* example from https://github.com/charliecalvert/JsObjects/blob/master/Data/MongoTalk02/Public/index.js
+
+/* example from https://github.com/charliecalvert/JsObjects/blob/master/Data/MongoTalk02/Public/index.js
 	 function showAllData() {
 
 	 $.getJSON('/read', function(data) {
