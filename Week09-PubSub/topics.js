@@ -1,11 +1,11 @@
 var topics = {};
 
-jQuery.Topic = function( id ) {
+jQuery.Topic = function(id) {
     
     var callbacks,
-        topic = id && topics[ id ];
+        topic = id && topics[id];
         
-    if ( !topic ) {
+    if (!topic) {
         callbacks = jQuery.Callbacks();
         topic = {
             publish: callbacks.fire,
@@ -13,8 +13,8 @@ jQuery.Topic = function( id ) {
             unsubscribe: callbacks.remove
         };
         
-        if ( id ) {
-            topics[ id ] = topic;
+        if (id) {
+            topics[id] = topic;
         }
     }
     

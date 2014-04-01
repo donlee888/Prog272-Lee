@@ -1,37 +1,50 @@
-function addMultiplySubtract() {
-	console.log("addMultiplySubtract called!"); 
-	
-	add: function(number1, number2) {
-		return number1 + number2;
-	}, 
-	
-	multiply: function(number1, number2) {
-		return number1 * number2;
-	}, 
-	
-	subtract: function(number1, number2) {
-		return number1 - number2;
+Calculate.Publisher = (function() {
+
+	function Publisher() {
+
+		$("#addButton").click({
+			i : 'add'
+		}, pub);
+		$("#multiplyButton").click({
+			i : 'multiply'
+		}, pub);
+		$("#subtractButton").click({
+			i : 'substract'
+		}, pub);
+
 	}
-};
 
-var add = function(number1, number2) {
-	return number1 + number2;
-};
+	function showData(value) {
+		$("#response").html(value);
+	}
 
-var multiply = function(number1, number2) {
-	return number1 * number2;
-};
+	var pub = function(event) {
+		var object = {
+			a : number1(),
+			b : (),
+			html : function(value) {
+				showData(value);
+			},
+			operation : event.data.i
+		};
+		$.Topic('calculate').publish(object);
+	};
 
-var subtract = function(number1, number2) {
-	return number1 - number2;
-};
+/*
+	var parseNumber1 = function() {
+		return parseInt($("#input1").val());
+	};
 
-// Export the addMulitplySubtract method from this module.
-// Otherwise it cannot be called from the main program.
+	var parseNumber2 = function() {
+		return parseInt($("#input2").val());
+	};
+*/
 
-// exports.addMultiplySubtract = new addMultiplySubtract());
+	return Publisher;
 
-exports.add = add;
-exports.multiply = multiply;
-exports.subtract = subtract;
+})();
 
+$(document).ready(function() {
+	new calculate.Subscriber();
+	new calculate.Publisher();
+}); 

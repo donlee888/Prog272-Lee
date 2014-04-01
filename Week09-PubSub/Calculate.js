@@ -1,4 +1,4 @@
-function addMultiplySubtract() {
+function Calculate() {
 	console.log("addMultiplySubtract called!"); 
 	
 	add: function(number1, number2) {

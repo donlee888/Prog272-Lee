@@ -1,14 +1,15 @@
 pubSub.publisher = ( function()
-{"use strict";
+{
+    "use strict";
     
     function publisher()
     {
-        $( "#num1" ).val( 3 );
-        $( "#num2" ).val( 2 );
+        $( "#input1" ).val( 3 );
+        $( "#input2" ).val( 2 );
         
-        $( "#addButton" ).on( "click", publishNums );
-        $( "#multiplyButton" ).on( "click", publishNums );
-        $( "#subtractButton" ).on( "click", publishNums );
+        $( "#addButton" ).on( "click", publishNumbers );
+        $( "#multiplyButton" ).on( "click", publishNumbers );
+        $( "#subtractButton" ).on( "click", publishNumbers );
     }
     
     var nums = function()
@@ -25,12 +26,12 @@ pubSub.publisher = ( function()
         };
     }
    
-   function publishNums()
+   function publishNumbers()
    {
-       var switcher = this.id;
+  
        var pubName = "";
        
-       switch( switcher )
+       switch( this.id )
        {
             case "addButton":
                 pubName = "addition";
