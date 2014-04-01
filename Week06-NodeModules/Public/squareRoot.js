@@ -1,23 +1,17 @@
-var squareRoot = (function() {
+var squareRoot = ( function(){
+var number = 0;
 
-// Constructor
-function squareRoot(miles) {
-console.log("squareRoot.Constructor called!");
+function squareRoot(){
 }
-// Private Data
-var privateDataString = "squareRoot Private String Data is called!";
 
-// Constructor
-MyObject.prototype.squareRoot = function() {
-console.log(privateDataString);
+console.log("squareRoot.Constructor called!");
+
+squareRoot.prototype.returnSquare = function(number){
+return Math.sqrt( number );
 };
-
-return squareRoot;
-
-}());
 
 // Export the myObject method from this module.
 // Otherwise it cannot be called from the main program.
 
-// exports.squareRoot = squareRoot();
-exports.squareRoot = new squareRoot();
+exports.squareRoot = squareRoot;
+// exports.squareRoot = new squareRoot();

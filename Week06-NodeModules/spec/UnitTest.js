@@ -1,34 +1,18 @@
-describe("Miles Object and Function Test", function() {'use strict';
-
-	it("expect object milesConvert miles to be 3", function() {
-		expect(milesConvert.miles).toBe(3);
+describe("Node Moldues Unit Test Suite", function() {
+	it("expects 7 + 3 to equal 10", function() {
+		expect(addSubtractMultiply.add(testNum1, testNum2)).toBe(10);
 	});
-
-	it("expect object milesConvert feet per mile to be 5280", function() {
-		expect(milesConvert.feetPerMile).toBe(5280);
+	it("expects 7 * 7 to equal 49", function() {
+		expect(addSubtractMultiply.multiply(testNum1, testNum2)).toBe(49);
 	});
-
-	it("expects object milesToFeet return 15840", function() {
-		expect(milesConvert.milesToFeet()).toBe(15840);
+	it("expects 7 - 1 to equal ", function() {
+		expect(addSubtractMultiply.subtract(testNum1, testNum2)).toBe(6);
 	});
-
-	it("expect object for milesConvert miles To Feet for 3 to be 15840", function() {
-		expect(milesConvert.milesToFeet(3)).toBe(15840);
+	it("expects 5280 feet to equal to 1 mile", function() {
+		expect(feetToMiles(5280)).toBe(1);
 	});
-
-	it("expects object for miles * feetPerMile to be 3 * 5280", function() {
-		expect(milesConvert.miles * milesConvert.feetPerMile).toBe(3 * 5280);
+	mySquareRootTest = new squareRoot();
+	it("expects the square root of 49 to be 7", function() {
+		expect(mySquareRootTest.returnSquare(49)).toBe(7);
 	});
-
-	it("expects fnMilesConvert(3) to equal 15840", function() {
-		var actual = fnMilesConvert(3);
-		expect(actual).toBe(15840);
-	});
-
-	it("expects fnMilesConvert(50) to equal 264000", function() {
-		var actual = fnMilesConvert(50);
-		expect(actual).toBe(264000);
-	});
-
-});
-
+}); 

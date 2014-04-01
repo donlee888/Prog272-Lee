@@ -1,23 +1,9 @@
-var milesToFeet = (function() {
-
-// Constructor
-function milesToFeet(miles) {
+var milesToFeet = function(miles){
 console.log("milesToFeet.Constructor called!");
-}
-// Private Data
-var privateDataString = "milesToFeet Private String Data is called!";
-
-// Constructor
-MyObject.prototype.milesToFeet = function() {
-console.log(privateDataString);
+return miles * 5280;
 };
-
-return milesToFeet;
-
-}());
 
 // Export the myObject method from this module.
 // Otherwise it cannot be called from the main program.
 
-// exports.milesToFeet =  milesToFeet();
-exports.milesToFeet = new milesToFeet();
+exports.milesToFeet = milesToFeet;
